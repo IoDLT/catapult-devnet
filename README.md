@@ -1,3 +1,5 @@
+## !!! STILL WORKING ON THIS, NOT STABLE !!! 
+
 # Catapult Community Testnet
 This repo will contain the settings, nemesis block information, and deployment needed for the Catapult community testnet. As more information is decided (explanations behind the settings of this network), this repo will be added to as the testnet progresses.
 

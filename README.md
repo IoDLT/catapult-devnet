@@ -3,6 +3,8 @@
 # Catapult Community Testnet
 This repo will contain the settings, nemesis block information, and deployment needed for the Catapult community testnet. As more information is decided (explanations behind the settings of this network), this repo will be added to as the testnet progresses.
 
+The node configured launches a dual node, meaning it has both Peer and Api roles.
+
 # Prerequisites 
 
 * [Docker](https://docs.docker.com/v17.09/engine/installation/)

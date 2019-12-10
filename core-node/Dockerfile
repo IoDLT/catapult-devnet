@@ -19,4 +19,5 @@ RUN python3 ./node/config.py "$harvester_key" "$boot_key" "$node_name"
 EXPOSE 7900 7902
 
 # CMD ./node/start.sh $harvester_key $boot_key $node_name
-CMD /usr/src/app/deps/source/catapult-server/_build/bin/catapult.server ./node
+CMD /usr/src/app/deps/source/catapult-server/_build/bin/catapult.server ./node \
+    && /usr/src/app/deps/source/catapult-server/_build/bin/catapult.broker

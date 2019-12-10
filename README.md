@@ -25,7 +25,8 @@ ENV node_name=<your-chosen-name>
 Then, simply run docker in the root of this repo: 
 
 ```
-docker 
+docker build -t cat-node .
+docker run -it cat-node
 ```
 
 And your node should be up, running, and connected to the network!

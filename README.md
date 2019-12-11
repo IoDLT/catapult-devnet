@@ -9,9 +9,9 @@ The node configured launches a dual node, meaning it has both Peer and Api roles
 
 * [Docker](https://docs.docker.com/v17.09/engine/installation/)
 
-* [Docker compose]()
+* [Docker compose](https://docs.docker.com/compose/install/)
 
-* Node private key
+* Node keypair
 
 * Harvester private key
 
@@ -22,7 +22,7 @@ The node configured launches a dual node, meaning it has both Peer and Api roles
 
 # Building + Running Locally
 
-Firstly, open the `Dockerfile` located in the root of this repo, and replace the following with your own values: 
+Firstly, open the `Dockerfile` located in `core-node/` of this repo, and replace the following with your own values: 
 
 ```Dockerfile
 ENV harvester_key=<your-key>
@@ -30,14 +30,13 @@ ENV boot_key=<your-key>
 ENV node_name=<your-chosen-name>
 ```
 
-Then, simply run docker in the root of this repo: 
+Then, simply run docker-compose in the root of this repo: 
 
 ```shell
-docker build -t cat-node .
-docker run -it cat-node
+docker-compose up
 ```
 
-And your node should be up, running, and connected to the network!
+And your node should be up and running!
 
 # Catapult Dependencies
 

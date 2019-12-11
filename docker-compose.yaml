@@ -1,0 +1,52 @@
+version: "3.7"
+
+networks:
+  catapult-testnet-node:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16
+
+services:
+  dualnode:
+    build: ./core-node
+    container_name: cat-dual-node
+    expose:
+      - 7900
+      - 7902
+      - 7901
+    ports:
+      - "7900:7900"
+    networks:
+      catapult-testnet-node:
+        ipv4_address: 172.28.1.1
+
+  db:
+    image: mongo
+    expose:
+      - 27017
+    ports:
+      - "27017:27017"
+    command: "mongod --bind_ip=db"
+    networks:
+      catapult-testnet-node:
+        ipv4_address: 172.28.1.2
+
+  rest:
+    build: ./rest
+    container_name: cat-rest-api
+    expose:
+      - 3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - dualnode
+    networks:
+      catapult-testnet-node:
+        ipv4_address: 172.28.1.3
+  # broker:
+  #   build: ./core-node/broker
+  #   container_name: cat-broker
+  #   depends_on:
+  #     - dualnode

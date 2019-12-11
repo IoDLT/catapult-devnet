@@ -9,17 +9,17 @@ harvester_key = sys.argv[1]
 boot_key = sys.argv[2]
 node_name = sys.argv[3]
 
-params_to_replace = [{"name": "bootPrivateKey =", "param": boot_key},
-                     {"name": "harvesterPrivateKey =", "param": harvester_key},
-                     {"name": "friendlyName =", "param": node_name}]
+params_to_replace = [{"name": "bootPrivateKey =", "param": boot_key, "file": "/usr/src/app/node/resources/config-user.properties"},
+                     {"name": "harvesterPrivateKey =", "param": harvester_key,
+                         "file": "/usr/src/app/node/resources/config-harvesting.properties"},
+                     {"name": "friendlyName =", "param": node_name,
+                         "file": "/usr/src/app/node/resources/config-node.properties"},
+                     {"name": "host =", "param": "127.0.0.1", "file": "/usr/src/app/node/resources/config-node.properties"}]
 
-files_to_replace = ["/usr/src/app/node/resources/config-user.properties",
-                    "/usr/src/app/node/resources/config-harvesting.properties", "/usr/src/app/node/resources/config-node.properties"]
-
-for idx, file in enumerate(files_to_replace):
+for param in params_to_replace:
     new_param = "{} {}".format(
-        params_to_replace[idx]["name"], params_to_replace[idx]["param"])
-    print(file)
-    for line in fileinput.input(file, inplace=True):
-        print(line.rstrip().replace(params_to_replace[idx]["name"], new_param))
+        param["name"], param["param"])
+    print(param["file"])
+    for line in fileinput.input(param["file"], inplace=True):
+        print(line.rstrip().replace(param["name"], new_param))
 print("done")

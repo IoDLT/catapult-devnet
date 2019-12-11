@@ -25,9 +25,15 @@ The node configured launches a dual node, meaning it has both Peer and Api roles
 Firstly, open the `Dockerfile` located in `core-node/` of this repo, and replace the following with your own values: 
 
 ```Dockerfile
-ENV harvester_key=<your-key>
-ENV boot_key=<your-key>
-ENV node_name=<your-chosen-name>
+ARG harvester_key=<your-key>
+ARG boot_key=<your-node-private-key>
+ARG node_name=<your-chosen-name>
+```
+
+for REST config:
+
+```Dockerfile
+ARG API_KEY=<node-public-key>
 ```
 
 Then, simply run docker-compose in the root of this repo: 

@@ -15,28 +15,29 @@ The node configured launches a dual node, meaning it has both Peer and Api roles
 
 * Harvester private key
 
+* Python
 
-# Connecting To The Network
+# Running
 
-// TODO
+Run `config.py` as follows:
 
-# Building + Running Locally
-
-Firstly, open the `Dockerfile` located in `core-node/` of this repo, and replace the following with your own values: 
-
-```Dockerfile
-ARG harvester_key=<your-key>
-ARG boot_key=<your-node-private-key>
-ARG node_name=<your-chosen-name>
+```shell
+python3 config.py <harvester_key> <boot_key> <node_name>
 ```
 
-for REST config:
+for REST config, put your node public key here:
 
 ```Dockerfile
 ARG API_KEY=<node-public-key>
 ```
 
-Then, simply run docker-compose in the root of this repo: 
+Run the bash script: 
+
+```shell
+bash start.sh
+```
+
+Alternatively, run docker-compose in the root of this repo: 
 
 ```shell
 docker-compose up

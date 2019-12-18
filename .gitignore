@@ -2,3 +2,4 @@
 core-node/currency_keys1.txt
 core-node/currency_keys2.txt
 core-node/harvester_keys.txt
+core-node/config/inflation.py

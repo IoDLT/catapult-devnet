@@ -19,31 +19,30 @@ The node configured launches a dual node, meaning it has both Peer and Api roles
 
 # Running
 
-Run `config.py` as follows:
+To run your node, fill out the `config.json` found in the base of this repo:
 
-```shell
-python3 config.py <harvester_key> <boot_key> <node_name>
+```json
+{
+    "harvesterKey": "<your-harvester-key>",
+    "bootKey": "<your-node-key>",
+    "apiKey": "<your-node-public-key>",
+    "nodeName": "<your-name>",
+    "clientPk": "<private-key-for-REST>"
+}
 ```
 
-for REST config, put your node public key here:
+Note: ensure the `clientPk` is NOT the boot key.
 
-```Dockerfile
-ARG API_KEY=<node-public-key>
+Once this is done, run:
+```sh
+python config.py
 ```
 
-Run the bash script: 
-
-```shell
+And, finally:
+```sh
 bash start.sh
 ```
 
-Alternatively, run docker-compose in the root of this repo: 
-
-```shell
-docker-compose up
-```
-
-And your node should be up and running!
 
 # Catapult Dependencies
 

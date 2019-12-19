@@ -23,9 +23,7 @@ params_to_replace = [{"name": "bootPrivateKey =", "param": boot_key, "file": "co
                      {"name": "harvesterPrivateKey =", "param": harvester_key,
                       "file": "core-node/config/resources/config-harvesting.properties"},
                      {"name": "friendlyName =", "param": node_name,
-                      "file": "core-node/config/resources/config-node.properties"},
-                     {"name": "host =", "param": "127.0.0.1", "file": "core-node/config/resources/config-node.properties"}]
-
+                      "file": "core-node/config/resources/config-node.properties"}]
 for param in params_to_replace:
     new_param = "{} {}".format(
         param["name"], param["param"])

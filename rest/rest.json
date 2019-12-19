@@ -24,7 +24,7 @@
             "*"
         ]
     }, 
-    "clientPrivateKey": "3485D98EFD7EB07ADAFCFD1A157D89DE2796A95E780813C0258AF3F5F84ED8CB", 
+    "clientPrivateKey": "696F734563F8C86AF178E5522E1279DCC0B9C743D44B617F1BCF000023C38FF3", 
     "db": {
         "maxConnectionAttempts": 5, 
         "name": "catapult", 
@@ -38,7 +38,7 @@
         "countRangeMax": 100
     }, 
     "apiNode": {
-        "publicKey": "9C6EEEB66C3BA58E6C0B16220106E13010D29DE6106FC678201045EA5AE8752C", 
+        "publicKey": "A874E1EDF4D09632CFDAF9727A53CDD557A0F573AC1990177F13AA9372C02914", 
         "host": "172.28.0.1", 
         "port": 7900, 
         "timeout": 1000

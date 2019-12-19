@@ -2,14 +2,25 @@
   "_info": "this file contains a list of all trusted peers and can be shared",
   "knownPeers": [
     {
-      "publicKey": "0000000000000000000000000000000000000000000000000000000000000000",
+      "publicKey": "9C6EEEB66C3BA58E6C0B16220106E13010D29DE6106FC678201045EA5AE8752C",
       "endpoint": {
-        "host": "127.0.0.1",
+        "host": "159.203.122.19",
         "port": 7900
       },
       "metadata": {
-        "name": "peernode",
-        "roles": "Peer"
+        "name": "friendly-node-1",
+        "roles": "Peer, Api"
+      }
+    },
+    {
+      "publicKey": "A874E1EDF4D09632CFDAF9727A53CDD557A0F573AC1990177F13AA9372C02914",
+      "endpoint": {
+        "host": "24.250.215.208",
+        "port": 7900
+      },
+      "metadata": {
+        "name": "friendly-node-2",
+        "roles": "Peer, Api"
       }
     }
   ]

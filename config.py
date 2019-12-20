@@ -38,6 +38,6 @@ with open('rest/rest.json', 'r') as f:
     data["db"]["url"] = "mongodb://db:27017/"
     data["clientPrivateKey"] = client_pk
     data["apiNode"]["publicKey"] = api_key
-    data["apiNode"]["host"] = "172.28.0.1"
+    data["apiNode"]["host"] = "172.28.1.1"
     with open('rest/rest.json', 'w') as jsonfile:
         json.dump(data, jsonfile, indent=4)

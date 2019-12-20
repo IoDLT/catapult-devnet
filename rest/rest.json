@@ -1,7 +1,7 @@
 {
     "websocket": {
         "mq": {
-            "host": "api-node-broker-0", 
+            "host": "172.28.1.1", 
             "monitorLoggingThrottle": 60000, 
             "port": 7902, 
             "monitorInterval": 500, 
@@ -39,7 +39,7 @@
     }, 
     "apiNode": {
         "publicKey": "A874E1EDF4D09632CFDAF9727A53CDD557A0F573AC1990177F13AA9372C02914", 
-        "host": "172.28.0.1", 
+        "host": "172.28.1.1", 
         "port": 7900, 
         "timeout": 1000
     }, 
@@ -58,12 +58,12 @@
     ], 
     "logging": {
         "console": {
-            "level": "verbose", 
-            "handleExceptions": true, 
             "formats": [
                 "colorize", 
                 "simple"
-            ]
+            ], 
+            "handleExceptions": true, 
+            "level": "verbose"
         }, 
         "file": {
             "maxFiles": 100, 

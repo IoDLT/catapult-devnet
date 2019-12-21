@@ -1,6 +1,7 @@
 FROM node:8.16.2-alpine3.10 as builder
 
 ARG REST_PATH=/usr/src/app/rest
+ENV HASHING_FUNCTION=keccak
 
 WORKDIR /usr/src/app
 
@@ -17,5 +18,4 @@ RUN mkdir -p /data/db
 WORKDIR ${REST_PATH}/rest
 RUN yarn rebuild
 
-RUN export HASHING_FUNCTION=keccak
 CMD yarn start resources/rest.json

@@ -17,4 +17,5 @@ RUN mkdir -p /data/db
 WORKDIR ${REST_PATH}/rest
 RUN yarn rebuild
 
+RUN export HASHING_FUNCTION=keccak
 CMD yarn start resources/rest.json

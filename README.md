@@ -12,7 +12,7 @@ The node configured launches a dual node, meaning it has both Peer and Api roles
 
 * [Docker compose](https://docs.docker.com/compose/install/)
 
-* Node keypair
+* Node Keypair
 
 * Harvester private key
 

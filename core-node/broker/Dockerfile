@@ -1,4 +1,4 @@
-FROM crackthecode01/catapult-deps:latest as builder
+FROM crackthecode01/catapult-deps:keccak-f3 as builder
 
 WORKDIR /usr/src/app
 

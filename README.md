@@ -1,7 +1,8 @@
-## !!! STILL IN PROGRESS, NOT STABLE !!! 
 
-# Catapult Community Testnet
-This repo will contain the settings, nemesis block information, and deployment needed for the Catapult community testnet. As more information is decided (explanations behind the settings of this network), this repo will be added to as the testnet progresses.
+# Catapult Devnet - A network for developers
+This repo contains the settings, nemesis block information, and deployment needed for the Catapult community testnet. As more information is decided (explanations behind the settings of this network), this repo will be added to as the testnet progresses.
+
+This network contains a few pumped up values, most notably the amount of cosignatories in multisignature accounts and more transactions per aggregate transaction.
 
 The node configured launches a dual node, meaning it has both Peer and Api roles.  
 
@@ -19,7 +20,7 @@ The node configured launches a dual node, meaning it has both Peer and Api roles
 
 # Running
 
-To run your node, fill out the `config.json` found in the base of this repo:
+To run your node, fill out the `config.json` found in the base of this repo.  Please ensure that you use `PUBLIC-TEST` or keccak-hashed public keys:
 
 ```json
 {
@@ -31,7 +32,7 @@ To run your node, fill out the `config.json` found in the base of this repo:
 }
 ```
 
-Note: ensure the `clientPk` is NOT the boot key.
+Note: ensure the `clientPk` does not match the boot key.
 
 Once this is done, run:
 ```sh

@@ -31,7 +31,7 @@ for param in params_to_replace:
     f = open(param["file"],'r')
     filedata = f.read()
     f.close()
-    newdata = re.sub(r'(?<={})[^\n\s]*'.format(param["name"]), " {}".format(param["param"]), filedata)
+    newdata = re.sub(r'(?<={})[^\n\s]*'.format(param["name"]), param["param"], filedata)
     print(newdata)
     f = open(param["file"],'w')
     f.write(newdata)

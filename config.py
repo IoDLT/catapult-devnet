@@ -2,7 +2,7 @@
 
 import json
 import sys
-import fileinput
+import re
 
 harvester_key = ""
 boot_key = ""
@@ -24,13 +24,18 @@ params_to_replace = [{"name": "bootPrivateKey =", "param": boot_key, "file": "co
                       "file": "core-node/config/resources/config-harvesting.properties"},
                      {"name": "friendlyName =", "param": node_name,
                       "file": "core-node/config/resources/config-node.properties"}]
+
 for param in params_to_replace:
     new_param = "{} {}".format(
         param["name"], param["param"])
-    print(param["file"])
-    for line in fileinput.input(param["file"], inplace=True):
-        print(line.rstrip().replace(param["name"], new_param))
-print("done")
+    f = open(param["file"],'r')
+    filedata = f.read()
+    f.close()
+    newdata = re.sub(r'(?<={})[^\n\s]*'.format(param["name"]), " {}".format(param["param"]), filedata)
+    print(newdata)
+    f = open(param["file"],'w')
+    f.write(newdata)
+    f.close()
 
 with open('rest/rest.json', 'r') as f:
     data = json.load(f)

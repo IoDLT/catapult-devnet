@@ -13,7 +13,8 @@ The node configured launches a dual node, meaning it has both Peer and Api roles
 Block explorer: http://devnet.iodlt.com
 
 Node List:
-| Node URL      
+
+| Node URL |     
 | ------------- |
 |http://178.128.184.107:3000/node/info| 
 |http://198.199.80.167:3000/node/info|

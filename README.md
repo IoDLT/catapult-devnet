@@ -4,7 +4,19 @@ This repo contains the settings, nemesis block information, and deployment neede
 
 This network contains a few pumped up values, most notably the amount of cosignatories in multisignature accounts and more transactions per aggregate transaction.
 
-The node configured launches a dual node, meaning it has both Peer and Api roles.  
+The node configured launches a dual node, meaning it has both Peer and Api roles. 
+
+
+
+## General Info
+***
+Block explorer: http://devnet.iodlt.com
+
+Node List:
+| Node URL      
+| ------------- |
+|http://178.128.184.107:3000/node/info| 
+|http://198.199.80.167:3000/node/info|
 
 # Prerequisites 
 
@@ -43,7 +55,6 @@ And, finally:
 ```sh
 bash start.sh
 ```
-
 
 # Catapult Dependencies
 

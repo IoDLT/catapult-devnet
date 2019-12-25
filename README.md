@@ -37,7 +37,7 @@ To run your node, fill out the `config.json` found in the base of this repo.  Pl
 ```json
 {
     "harvesterKey": "<your-harvester-key>",
-    "bootKey": "<your-node-key>",
+    "bootKey": "<your-node-private-key>",
     "apiKey": "<your-node-public-key>",
     "nodeName": "<your-name>",
     "clientPk": "<private-key-for-REST>"

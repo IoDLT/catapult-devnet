@@ -1,5 +1,8 @@
 
 # Catapult Devnet - A network for developers
+
+> Note: This is an experimental network that may be subject to occasional restarts.
+
 This repo contains the settings, nemesis block information, and deployment needed for the Catapult community testnet. As more information is decided (explanations behind the settings of this network), this repo will be added to as the testnet progresses.
 
 This network contains a few pumped up values, most notably the amount of cosignatories in multisignature accounts and more transactions per aggregate transaction.

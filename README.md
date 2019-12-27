@@ -34,6 +34,12 @@ Node List:
 
 * Python
 
+# Hosting
+
+I recommend using DigitalOcean.  Using this [link](https://m.do.co/c/7b2340694e57), you can have $100 worth of credit for 60 days, meaning you can run nodes without spending anything up front.  It also gives me a referral, which in turn allows me to upkeep the beacon nodes, faucet, etc:
+
+https://m.do.co/c/7b2340694e57
+
 # Running
 
 To run your node, fill out the `config.json` found in the base of this repo.  Please ensure that you use `PUBLIC-TEST` or keccak-hashed public keys:

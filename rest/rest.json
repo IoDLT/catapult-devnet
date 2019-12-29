@@ -58,12 +58,12 @@
     ], 
     "logging": {
         "console": {
-            "level": "verbose", 
-            "handleExceptions": true, 
             "formats": [
                 "colorize", 
                 "simple"
-            ]
+            ], 
+            "handleExceptions": true, 
+            "level": "verbose"
         }, 
         "file": {
             "maxFiles": 100, 

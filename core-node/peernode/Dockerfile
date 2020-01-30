@@ -1,4 +1,4 @@
-FROM crackthecode01/catapult-deps:keccak-f3 as builder
+FROM crackthecode01/catapult-deps:keccak-f4 as builder
 
 ARG BIN_DIR=/usr/src/app/deps/source/catapult-server/_build/bin
 

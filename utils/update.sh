@@ -8,7 +8,7 @@ docker system prune -a
 git reset HEAD --hard
 
 # Make sure data is reset
-source reset_node.sh
+source utils/reset_node.sh
 
 # Pull latest
 git pull

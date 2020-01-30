@@ -67,6 +67,10 @@ And, finally:
 bash start.sh
 ```
 
+# Update 
+
+If an update to this repo occurs, you can run `bash utils/update.sh` from the root of this repo to easily update to the newest version while still keeping your config in place.
+
 # Catapult Dependencies
 
 The directory `catapult-deps/` contains a Docker configuration for installing and compiling Catapult and its dependencies into one image.  Currently, this image is [pre-built](https://hub.docker.com/repository/docker/crackthecode01/catapult-deps) and used to run Catapult as per the Dockerfile in `core-node/`.  To build this image yourself is simple: 

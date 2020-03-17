@@ -4,7 +4,7 @@
     {
       "publicKey": "D9A38C9D585988FA0F7E7322051C1D7270D1EC39E871DD01579322DBA0870643",
       "endpoint": {
-        "host": "165.227.253.30",
+        "host": "198.199.80.167",
         "port": 7900
       },
       "metadata": {
@@ -15,7 +15,7 @@
     {
       "publicKey": "5E395E6F6ECD8F0978EBA16474C1B26D69774F83DCBC17A29CAC04F68912C6F9",
       "endpoint": {
-        "host": "138.197.233.181",
+        "host": "178.128.184.107",
         "port": 7900
       },
       "metadata": {

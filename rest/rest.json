@@ -38,7 +38,7 @@
         "countRangeMax": 100
     }, 
     "apiNode": {
-        "publicKey": "0156DD2F21496ABC0A004309BE073E12E55B056460C95979E54C2599F56AC688", 
+        "publicKey": "", 
         "host": "172.28.1.1", 
         "port": 7900, 
         "timeout": 1000

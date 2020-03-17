@@ -161,12 +161,11 @@ function install_catapult {
     cmake_options+=(-DBSONC_LIB=${mongo_output_dir}/lib/libbsonc-1.0.${lib_suffix})
     
     ## OTHER ##
-    cmake_options+=(-DUSE_KECCAK=true)
     cmake_options+=(-DCMAKE_BUILD_TYPE=Release)
     cmake_options+=(-G)
     cmake_options+=(Ninja)
     
-    git clone --branch v0.9.2.1 https://github.com/nemtech/catapult-server.git 
+    git clone --branch v0.9.3.1 https://github.com/nemtech/catapult-server.git 
     cd catapult-server
     
     mkdir _build

@@ -1,7 +1,6 @@
 FROM node:8.16.2-alpine3.10 as builder
 
 ARG REST_PATH=/usr/src/app/rest
-ENV HASHING_FUNCTION=keccak
 
 WORKDIR /usr/src/app
 

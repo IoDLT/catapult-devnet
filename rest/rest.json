@@ -42,9 +42,9 @@
         "host": "172.28.1.1",
         "port": 7900,
         "timeout": 1000,
-        "tlsClientCertificatePath": "/usr/local/certs/node.crt.pem",
-        "tlsClientKeyPath": "/usr/local/certs/node.key.pem",
-        "tlsCaCertificatePath": "/usr/local/certs/ca.cert.pem"
+        "tlsClientCertificatePath": "/certs/node.crt.pem",
+        "tlsClientKeyPath": "/certs/node.key.pem",
+        "tlsCaCertificatePath": "/certs/ca.cert.pem"
     },
     "websocket": {
         "mq": {

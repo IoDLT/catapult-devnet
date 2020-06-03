@@ -13,7 +13,7 @@ services:
     container_name: cat-dual-node
     volumes:
       - ./core-node/config/data/:/data:rw
-      - ./core-node/config/certs/:/usr/src/app/certs:rw
+      - ./core-node/config/certs/:/certs:rw
       - ./core-node/config/resources:/usr/src/app/node/resources
     expose:
       - 7900
@@ -46,7 +46,7 @@ services:
       - db
       - dualnode
     volumes:
-      - ./core-node/config/certs/:/usr/src/app/certs:rw
+      - ./core-node/config/certs/:/certs:rw
       - ./core-node/config/resources:/resources:rw
     networks:
       catapult-testnet-node:
@@ -57,7 +57,7 @@ services:
     container_name: cat-broker
     volumes:
       - ./core-node/config/data/:/data:rw
-      - ./core-node/config/certs/:/usr/src/app/certs:rw
+      - ./core-node/config/certs/:/certs:rw
       - ./core-node/config/resources:/usr/src/app/broker/resources
     depends_on:
       - dualnode

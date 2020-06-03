@@ -1,80 +1,84 @@
 {
-    "websocket": {
-        "mq": {
-            "host": "172.28.1.4", 
-            "monitorLoggingThrottle": 60000, 
-            "port": 7902, 
-            "monitorInterval": 500, 
-            "connectTimeout": 10000
-        }, 
-        "allowOptionalAddress": true
-    }, 
     "network": {
-        "name": "publicTest", 
-        "description": "Catapult Devnet"
-    }, 
+        "name": "publicTest",
+        "description": "catapult public test network",
+        "propertiesFilePath": "/resources/config-network.properties"
+    },
+    "port": 3000,
     "crossDomain": {
-        "allowedMethods": [
-            "GET", 
-            "POST", 
-            "PUT", 
-            "OPTIONS"
-        ], 
         "allowedHosts": [
             "*"
+        ],
+        "allowedMethods": [
+            "GET",
+            "POST",
+            "PUT",
+            "OPTIONS"
         ]
-    }, 
-    "clientPrivateKey": "", 
-    "db": {
-        "maxConnectionAttempts": 5, 
-        "name": "catapult", 
-        "url": "mongodb://db:27017/", 
-        "pageSizeMax": 100, 
-        "pageSizeMin": 10, 
-        "pageSizeStep": 25, 
-        "countRangeMin": 1, 
-        "countRangePreset": 25, 
-        "baseRetryDelay": 500, 
-        "countRangeMax": 100
-    }, 
-    "apiNode": {
-        "publicKey": "", 
-        "host": "172.28.1.1", 
-        "port": 7900, 
-        "timeout": 1000
-    }, 
+    },
     "extensions": [
-        "accountLink", 
-        "aggregate", 
-        "lockHash", 
-        "lockSecret", 
-        "mosaic", 
-        "metadata", 
-        "multisig", 
-        "namespace", 
-        "receipts", 
-        "restrictions", 
+        "accountLink",
+        "aggregate",
+        "lockHash",
+        "lockSecret",
+        "mosaic",
+        "metadata",
+        "multisig",
+        "namespace",
+        "receipts",
+        "restrictions",
         "transfer"
-    ], 
+    ],
+    "db": {
+        "url": "mongodb://db:27017/",
+        "name": "catapult",
+        "pageSizeMin": 10,
+        "pageSizeMax": 100,
+        "pageSizeDefault": 20,
+        "maxConnectionAttempts": 5,
+        "baseRetryDelay": 500
+    },
+    "apiNode": {
+        "host": "172.28.1.1",
+        "port": 7900,
+        "timeout": 1000,
+        "tlsClientCertificatePath": "/usr/local/certs/node.crt.pem",
+        "tlsClientKeyPath": "/usr/local/certs/node.key.pem",
+        "tlsCaCertificatePath": "/usr/local/certs/ca.cert.pem"
+    },
+    "websocket": {
+        "mq": {
+            "host": "172.28.1.4",
+            "port": 7902,
+            "monitorInterval": 500,
+            "connectTimeout": 10000,
+            "monitorLoggingThrottle": 60000
+        },
+        "allowOptionalAddress": true
+    },
+    "throttling": {
+        "burst": 20,
+        "rate": 5
+    },
     "logging": {
         "console": {
             "formats": [
-                "colorize", 
+                "colorize",
                 "simple"
-            ], 
-            "handleExceptions": true, 
-            "level": "verbose"
-        }, 
+            ],
+            "level": "verbose",
+            "handleExceptions": true
+        },
         "file": {
-            "maxFiles": 100, 
-            "level": "verbose", 
-            "filename": "catapult-rest.log", 
-            "maxsize": 20971520, 
             "formats": [
                 "prettyPrint"
-            ], 
-            "handleExceptions": true
+            ],
+            "level": "verbose",
+            "handleExceptions": true,
+            "filename": "catapult-rest.log",
+            "maxsize": 20971520,
+            "maxFiles": 100
         }
-    }, 
-    "port": 3000
+    },
+    "numBlocksTransactionFeeStats": 300
 }

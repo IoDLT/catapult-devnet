@@ -1,4 +1,4 @@
-FROM crackthecode01/catapult-deps:v0.9.3.1 as builder
+FROM crackthecode01/catapult-deps:v0.9.5.1 as builder
 
 WORKDIR /usr/src/app
 

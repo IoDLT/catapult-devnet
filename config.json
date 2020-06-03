@@ -1,7 +1,5 @@
 {
     "harvesterKey": "",
-    "bootKey": "",
-    "apiKey": "",
-    "nodeName": "",
-    "clientPk": ""
+    "harvesterVrfKey": "",
+    "nodeName": ""
 }

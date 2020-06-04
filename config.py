@@ -39,7 +39,7 @@ for param in params_to_replace:
 with open('rest/rest.json', 'r') as f:
     data = json.load(f)
     # other rest options here
-    data["db"]["url"] = "mongodb://db:27017/"
+    data["db"]["url"] = "mongodb://172.28.1.2:27017/"
     data["apiNode"]["host"] = "172.28.1.1"
     with open('rest/rest.json', 'w') as jsonfile:
         json.dump(data, jsonfile, indent=4)

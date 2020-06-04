@@ -17,5 +17,6 @@ git pull
 cp /tmp/config.json.BAK config.json
 
 python3 config.py
-echo Ready for starting, now use bash start.sh
+
+echo Ready for generating the certificate (bash utils/generate_certificate.sh)
 echo

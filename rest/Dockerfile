@@ -1,4 +1,4 @@
-FROM node:8.16.2-alpine3.10 as builder
+FROM node:12.18.0-alpine3.10 as builder
 
 ARG REST_PATH=/usr/src/app/rest
 

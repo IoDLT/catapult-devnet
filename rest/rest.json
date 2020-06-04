@@ -30,7 +30,7 @@
         "transfer"
     ],
     "db": {
-        "url": "mongodb://db:27017/",
+        "url": "mongodb://172.28.1.2:27017/",
         "name": "catapult",
         "pageSizeMin": 10,
         "pageSizeMax": 100,

@@ -29,6 +29,8 @@ services:
     image: mongo
     expose:
       - 27017
+    ports:
+      - "27017:27017"
     command: "mongod --bind_ip=db"
     networks:
       catapult-testnet-node:
@@ -40,9 +42,6 @@ services:
       - 3000
     ports:
       - "3000:3000"
-    depends_on:
-      - db
-      - dualnode
     volumes:
       - ./core-node/config/certs/:/certs
       - ./core-node/config/resources:/resources
@@ -53,14 +52,39 @@ services:
   broker:
     build: ./core-node/broker
     container_name: cat-broker
+    links:
+      - "restore:restore"
     volumes:
       - ./core-node/config/data/:/data:rw
       - ./core-node/config/certs/:/certs
       - ./core-node/config/resources:/resources
     depends_on:
-      - dualnode
-      - db
-      - rest
+      - restore
     networks:
       catapult-testnet-node:
         ipv4_address: 172.28.1.4
+
+  restore:
+    build: ./backups/restore
+    container_name: mongo-restore
+    volumes:
+      - ./backups/config/:/config:rw
+    depends_on:
+      - db
+    networks:
+      catapult-testnet-node:
+        ipv4_address: 172.28.1.5
+
+  store:
+    build: ./backups/store
+    container_name: mongo-store
+    volumes:
+      - ./backups/config/:/config:rw
+    depends_on:
+      - dualnode
+      - db
+      - rest
+      - restore
+    networks:
+      catapult-testnet-node:
+        ipv4_address: 172.28.1.6

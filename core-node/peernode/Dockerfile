@@ -1,4 +1,4 @@
-FROM crackthecode01/catapult-deps:v0.9.5.1 as builder
+FROM crackthecode01/symbol-deps:0951-broker-patch as builder
 
 ARG BIN_DIR=/usr/src/app/deps/source/catapult-server/_build/bin
 

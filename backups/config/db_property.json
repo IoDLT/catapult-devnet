@@ -1,0 +1,6 @@
+
+{
+    "hostname": "172.28.1.2",
+    "port": "27017",
+    "database": "catapult"
+}

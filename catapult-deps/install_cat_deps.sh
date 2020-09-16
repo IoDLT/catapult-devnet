@@ -175,7 +175,7 @@ function install_catapult {
     cmake_options+=(-G)
     cmake_options+=(Ninja)
     
-    git clone https://github.com/nemtech/catapult-server.git --single-branch --branch ${CATAPULT_VERSION}
+    git clone https://github.com/CrackTheCode016/catapult-server.git --single-branch --branch 0951/broker-patch
     cd catapult-server
     
     mkdir _build

@@ -1,2 +1,2 @@
-0 * * * * /bin/bash /usr/bin/store-command-connector.sh >> /var/log/cron.log 2>&1
+59 23 * * * /bin/bash /usr/bin/store-command-connector.sh >> /var/log/cron.log 2>&1
 # empty line for valid cron

@@ -13,13 +13,14 @@ services:
     container_name: cat-dual-node
     volumes:
       - ./core-node/config/data/:/data:rw
-      - ./core-node/config/resources:/usr/src/app/node/resources
+      - ./core-node/config/certs/:/certs:rw
+      - ./core-node/config/resources:/resources
     expose:
       - 7900
       - 7902
-      - 7901
     ports:
       - "7900:7900"
+      - "7902:7902"
     networks:
       catapult-testnet-node:
         ipv4_address: 172.28.1.1
@@ -28,8 +29,6 @@ services:
     image: mongo
     expose:
       - 27017
-    ports:
-      - "27017:27017"
     command: "mongod --bind_ip=db"
     networks:
       catapult-testnet-node:
@@ -44,6 +43,9 @@ services:
     depends_on:
       - db
       - dualnode
+    volumes:
+      - ./core-node/config/certs/:/certs
+      - ./core-node/config/resources:/resources
     networks:
       catapult-testnet-node:
         ipv4_address: 172.28.1.3
@@ -53,7 +55,8 @@ services:
     container_name: cat-broker
     volumes:
       - ./core-node/config/data/:/data:rw
-      - ./core-node/config/resources:/usr/src/app/broker/resources
+      - ./core-node/config/certs/:/certs
+      - ./core-node/config/resources:/resources
     depends_on:
       - dualnode
       - db

@@ -1,14 +1,13 @@
 
 # Catapult Devnet - A network for developers
 
-> Note: This is an experimental network that may be subject to occasional restarts.
+> Note: This is an experimental network that may be subject to occasional restarts and interruptions.
 
 This repo contains the settings, nemesis block information, and deployment needed for the Catapult community testnet. As more information is decided (explanations behind the settings of this network), this repo will be added to as the testnet progresses.
 
 This network contains a few pumped up values, most notably the amount of cosignatories in multisignature accounts and more transactions per aggregate transaction.
 
-The node configured launches a dual node, meaning it has both Peer and Api roles. 
-
+The node configured launches a dual node, meaning it has both Peer and Api roles.
 
 
 ## General Info
@@ -33,7 +32,11 @@ Node List:
 
 * Harvester private key
 
+* Harvester VRF key
+
 * Python
+
+* OpenSSL 1.1.1
 
 # Hosting
 
@@ -47,19 +50,20 @@ To run your node, fill out the `config.json` found in the base of this repo.  Pl
 
 ```json
 {
-    "harvesterKey": "<your-harvester-key>",
-    "bootKey": "<your-node-private-key>",
-    "apiKey": "<your-node-public-key>",
-    "nodeName": "<your-name>",
-    "clientPk": "<private-key-for-REST>"
+    "harvesterKey": "",
+    "harvesterVrfKey": "",
+    "nodeName": ""
 }
 ```
-
-Note: ensure the `clientPk` does not match the boot key.
 
 Once this is done, run:
 ```sh
 python config.py
+```
+
+Generate the certificates:
+```sh
+bash utils/generate_certificate.sh
 ```
 
 And, finally:

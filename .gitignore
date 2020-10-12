@@ -1,4 +1,6 @@
 *.DS_Store
 core-node/currency_keys.txt
+core-node/config/certs/
 core-node/config/inflation.py
 friendly-node-config*.json
+gen_vrf_transactions.sh

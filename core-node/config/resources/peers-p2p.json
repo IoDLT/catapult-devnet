@@ -2,7 +2,7 @@
   "_info": "this file contains a list of all trusted peers and can be shared",
   "knownPeers": [
     {
-      "publicKey": "D9A38C9D585988FA0F7E7322051C1D7270D1EC39E871DD01579322DBA0870643",
+      "publicKey": "C337D2B2E0186D207695D2589470CC9D6B6201ACA94ABF99F1F0396C5462C03C",
       "endpoint": {
         "host": "198.199.80.167",
         "port": 7900
@@ -13,7 +13,7 @@
       }
     },
     {
-      "publicKey": "5E395E6F6ECD8F0978EBA16474C1B26D69774F83DCBC17A29CAC04F68912C6F9",
+      "publicKey": "9A377DD7310B19105DD1E3693F1885BEC441F3E26B7D28F99DA0ABD3656D7305",
       "endpoint": {
         "host": "178.128.184.107",
         "port": 7900

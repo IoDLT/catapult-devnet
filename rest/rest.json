@@ -6,6 +6,12 @@
     },
     "port": 3000,
     "crossDomain": {
+        "allowedMethods": [
+            "GET",
+            "POST",
+            "PUT",
+            "OPTIONS"
+        ],
         "allowedHosts": [
             "*"
         ],
